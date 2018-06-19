@@ -1,0 +1,214 @@
+#how_to_use {
+  position: relative;
+  margin-bottom: 15vw;
+  .imageHeadline {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .imageButton {
+    margin: 28px auto;
+  }
+}
+
+#how_to_use_tab_field {
+  .tabs {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: space-between;
+    li {
+      line-height: 0;
+      margin-right: 2vw;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+#how_to_use_contents_field {
+  border: 10px solid colors(theme, green);
+  border-radius: 0 0 5px 5px;
+  height: 136vw;
+  margin-bottom: 15px;
+  overflow: scroll;
+}
+
+#use01 {
+  padding: 10vw 5vw;
+  h3 {
+    color: #72be6e;
+    font-weight: bold;
+    font-size: 5.0vw;
+    text-align: center;
+  }
+  ol {
+    margin: 1.6rem auto 0;
+    li {
+      font-size: 3.4vw;
+      margin-bottom: 15px;
+      line-height: 1.8;
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      span {
+        width: calc(100% - 30px);
+        display: inline-block;
+        margin-left: auto;
+      }
+      &:nth-child(1) {
+        &::before {
+          content: '';
+          display: block;
+          width: 28px;
+          height: 28px;
+          background: url('../images/number01.png') center / contain no-repeat;
+        }
+      }
+      &:nth-child(2) {
+        &::before {
+          content: '';
+          display: block;
+          width: 28px;
+          height: 28px;
+          background: url('../images/number02.png') center / contain no-repeat;
+        }
+      }
+    }
+  }
+  .attention {
+    margin: 1.5rem auto 3rem;
+    font-size: 14px;
+  }
+  .text-link-green {
+    text-align: center;
+    font-weight: bold;
+    font-size: 5.0vw;
+    a {
+      text-decoration: underline;
+      color: #089900;
+    }
+  }
+}
+
+#use02 {
+  text-align: center;
+  img {
+    max-width: 100%;
+    width: auto;
+  }
+}
+
+#use03 {
+  padding: 12vw 10% 7.5vw;
+  margin: auto;
+  p {
+    font-size: 4.0vw;
+  }
+  .fee {
+    text-align: center;
+    padding-bottom: 18px;
+    border-bottom: 1px solid;
+    margin: 0 auto 12px;
+    img {
+      display: inline-block;
+      margin-bottom: 10vw;
+    }
+  }
+  .text-link-green {
+    text-align: center;
+    font-weight: bold;
+    font-size: 5.0vw;
+    a {
+      text-decoration: underline;
+      color: #089900;
+    }
+  }
+  .fee-table {
+    border-collapse: separate;
+    border-spacing: 0 1.5vw;
+    margin-bottom: 6.0vw;
+    th, td {
+      font-size: 4.0vw;
+      vertical-align: top;
+      display: inline-block;
+    }
+    th {
+      &::before {
+        content: '■ ';
+        font-size: 100%;
+      }
+    }
+    td {
+      &::before {
+        content: ' ： ';
+        font-size: 100%;
+      }
+    }
+  }
+}
+
+#use04 {
+  padding: 5vw 3.5vw;
+  .flow {
+    margin-bottom: 20px;
+    li {
+      font-size: 4.8vw;
+      margin-bottom: 1vw;
+      line-height: 1.6;
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      .flow-li {
+        display: inline-block;
+        margin-left: 10px;
+        width: calc(100% - 6vw);
+        font-size: 3.8vw;
+      }
+
+      &::before {
+        content: '';
+        display: block;
+        width: 6vw;
+        height: 6vw;
+      }
+
+      &:nth-child(1) {
+        &::before {
+          background: url('../images/number01.png') center / contain no-repeat;
+        }
+      }
+      &:nth-child(2) {
+        &::before {
+          background: url('../images/number02.png') center / contain no-repeat;
+        }
+      }
+      &:nth-child(3) {
+        &::before {
+          background: url('../images/number03.png') center / contain no-repeat;
+        }
+      }
+      &:nth-child(4) {
+        &::before {
+          background: url('../images/number04.png') center / contain no-repeat;
+        }
+      }
+      &:nth-child(5) {
+        &::before {
+          background: url('../images/number05.png') center / contain no-repeat;
+        }
+      }
+    }
+  }
+  .text-link-green {
+    font-weight: bold;
+    font-size: 3.5vw;
+    a {
+      text-decoration: underline;
+      color: #089900;
+    }
+  }
+  .details {
+    font-size: 2.8vw;
+  }
+}

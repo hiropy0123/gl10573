@@ -1,0 +1,111 @@
+/**
+ * #Base
+ */
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 15px;
+    line-height: my-strip-unit(my-margins());
+    // iOSとAndroidでのリンクをタップ時のハイライトをリセットする。 
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    @include mq(md) {
+        font-size: 16px;
+    }
+}
+
+body {
+    color: colors(text);
+    font-weight: 400;
+    background-color: colors(bg);
+    // アンチエイリアスを指定する 
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+    // メトリクスカーニングを指定する 
+    font-kerning: normal;
+    overflow-x: hidden;
+}
+
+// 日本語にitalicは使用されないためリセットする
+i,
+cite,
+em,
+address,
+dfn {
+    font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: inherit;
+    font-family: inherit;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+a {
+    color: colors(link);
+    text-decoration: none;
+    &:visited {
+        color: colors(link, visited);
+    }
+    &:hover,
+    &:focus {
+        color: colors(link, hover);
+        text-decoration: none;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+// マージンを持たないブロックとする。
+figure {
+    margin: 0;
+}
+
+// `padding-strat: 40px;`の相対値
+ul, ol {
+  padding: 0;
+  margin: 0;
+}
+
+// ネストされたリストのマージンをリセットする
+li {
+    > ul,
+    > ol {
+        margin-bottom: 0;
+    }
+}
+
+dd {
+    margin-left: 0;
+}
+
+
+table {
+    width: 100%;
+}
+
+th {
+    text-align: left;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}

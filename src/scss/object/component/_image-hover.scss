@@ -1,0 +1,11 @@
+a {
+  img {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    max-width: 100%;
+    height: auto;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

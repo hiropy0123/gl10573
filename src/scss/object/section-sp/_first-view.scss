@@ -1,0 +1,53 @@
+#first_view {
+  position: relative;
+  width: 100%;
+  margin: 0 auto 5vw;
+  text-align: center;
+}
+
+#main_visual {
+  position: relative;
+  width: 100%;
+  height: 100vw;
+  max-height: 630px;
+  background: url('../images/mainvisual.jpg') center top / cover no-repeat;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    height: 8vw;
+    background: url('../images/mainvisual-cover_sp.png') center / cover no-repeat;
+  }
+}
+
+.mv-slider {
+  li {
+    display: block;
+  }
+}
+
+figure.fig00sp {
+  width: 80%;
+  position: absolute;
+  bottom: -10vw;
+  left: 10%;
+  z-index: 20;
+}
+
+#main_visual .pageTitle {
+  position: relative;
+  top: 40px;
+  margin: 0 auto;
+  width: 85%;
+}
+
+#first_view .t-content {
+  margin-top: 10vw;
+  h2 {
+    margin-bottom: 1rem;
+  }
+}

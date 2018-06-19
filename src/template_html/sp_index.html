@@ -1,0 +1,159 @@
+<?php
+    if (!defined('XOOPS_ROOT_PATH')) {
+        require_once '/usr/local/apache2/htdocs/mainfile.php';
+    }
+
+
+    $include_file_base_path = "/usr/local/apache2/tgate/tabihatsu/";
+
+    function fileList($path) {
+        $files = scandir($path);
+        $list = array();
+        $count = 0;
+        foreach ($files as $file){
+            if (is_file($path . $file) == true && substr($file , -5) == ".list" ){
+                $list[] = $path . $file;
+            }
+        }
+        return $list;
+    }
+
+$xoops_url = XOOPS_URL;
+$xoops_ssl_url = XOOPS_SSL_URL;
+$show_start_year = date('Y');
+$show_end_year = date('Y', strtotime("+ 2 year"));
+
+$root =& XCube_Root::getSingleton();
+$context =& $root->getContext();
+
+$xoops_isuser = false;
+if (is_object($context->mXoopsUser)) {
+    $xoops_isuser = true;
+}
+
+//関連ID(無しの時はコメントアウト)
+//$GMURL = $_SERVER['SERVER_NAME'];
+//if($GMURL == "devtabihatsu.com"){$rel_id = 95268;}
+//if($GMURL == "tabihatsu.jp"){$rel_id = 95268;}
+
+$smart_flg = true;
+
+?>
+<!doctype html>
+
+<html><head>
+		<title>浜名湖で感動体験｜旅の発見</title>
+		<meta http-equiv="content-language" content="ja">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<!-- OGP -->
+		<meta property="og:title" content="緑の直行便グリーンライナーのご予約｜往復2000円で絶景の十日町・農業体験を楽しもう - 旅の発見">
+		<meta property="og:description" content="">
+		<meta property="og:url" content="http://tabihatsu.jp/special/greenliner/">
+		<meta property="og:image" content="http://tabihatsu.jp/special/greenliner/images/top_sp.png">
+		<!-- /OGP -->
+		<script type="text/javascript" src="/common_5th/sp_js/jquery.min.js"></script>
+		<script type="text/javascript" src="/common_5th/sp_js/slidebars.min.js"></script>
+		<script type="text/javascript" src="/tabijs/JsComboArea.js"></script>
+		<script type="text/javascript" src="js/sp_greenliner.js"></script>
+		<link rel="stylesheet" href="/common_5th/sp_css/slidebars.css" media="all">
+		<link rel="stylesheet" href="/common_5th/sp_css/style.css" media="all">
+		<link rel="stylesheet" href="css/sp_greenliner.css" media="all">
+		<link rel="apple-touch-icon" href="/tabiimg/apple-touch-icon.png" />
+		<script>
+			(function($) {
+				$(document).ready(function() {
+					$.slidebars();
+				});
+			})(jQuery);
+		</script>
+	</head>
+	<body>
+		<!-- Navbar -->
+		<nav class="navbar navbar-default navbar-fixed-top sb-slide clearfix" role="navigation">
+			<!-- Left Control -->
+			<div class="sb-toggle-left navbar-left">
+				<div class="navicon-line"></div>
+				<div class="navicon-line"></div>
+				<div class="navicon-line"></div>
+			</div>
+			<!-- /.sb-control-left -->
+
+			<!-- Right Control -->
+			<div class="navbar-right">
+				<a href="<?php echo $xoops_url ?>/program_search/search.html"
+					title="検索"><img src="/common_5th/top_img/nav_search.png"
+					alt="検索" width="40" height="40" /></a>
+			</div>
+			<!-- /.sb-control-right -->
+
+			<div class="container">
+				<!-- Logo -->
+				<div id="logo" class="navbar-left">
+					<h1>
+						<a href="<?php echo $xoops_url ?>/" title="旅の発見トップ"><img
+							src="/common_5th/top_img/nav_logo.png" alt="旅の発見" width="80"
+							height="40" /></a>
+					</h1>
+				</div>
+				<!-- /#logo -->
+			</div>
+		</nav>
+
+		<div id="sb-site">
+			<div id="contents">
+
+				<!-- ここからコンテンツエリア -->
+				<div class="ichihara_wrp">
+					<div id="ichihara_sns_sp" class="ichihara_clearfix">
+						<ul class="ichihara_sns_list_sp ichihara_clearfix">
+							<li>
+								<a href="http://line.me/R/msg/text/?緑の直行便グリーンライナーのご予約｜往復2000円で絶景の十日町・農業体験を楽しもう - 旅の発見 http://tabihatsu.jp/special/greenliner/" target="_blank"><img src="images/btn_ln_sp.png" height="20" alt="LINE"></a>
+							</li>
+							<li>
+								<iframe src="https://www.facebook.com/plugins/like.php?href=http%3a%2f%2ftabihatsu%2ejp%2fspecial%2fgreenliner%2f&width=71&layout=button&action=like&show_faces=false&share=false&height=65&appId=145490145857491" width="75" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+							</li>
+							<li>
+								<a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja">ツイート</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- END ichihara-wrp -->
+				<!-- ここまでコンテンツエリア -->
+
+				<div id="footer">
+					<ul>
+						<li><a href="http://www.knt.co.jp/tv/webtravel/"
+							target="_blank">&raquo; 運営会社案内</a></li>
+						<li><a href="<?php echo $xoops_url ?>/yakkan/index.html"
+							title="標識・約款">&raquo; 標識・約款</a></li>
+						<li><a href="<?php echo $xoops_ssl_url ?>/modules/inquiry/"
+							title="お問合わせ">&raquo; お問合わせ</a></li>
+						<li><a href="<?php echo $xoops_url ?>/privacy/index.html"
+							title="個人情報保護への取り組みについて">&raquo; 個人情報保護への取り組みについて</a></li>
+						<li><a href="<?php echo $xoops_url ?>/guide/recommend.html"
+							title="サイトご利用上の注意事項">&raquo; サイトご利用上の注意事項</a></li>
+						<li><a
+							href="<?php echo $xoops_url ?>/modules/member/kiyaku.html"
+							target="_blank" title="会員規約">&raquo; 会員規約</a></li>
+					</ul>
+				</div>
+				<address>Copyright© All rights reserved by KNT Co., Ltd.</address>
+
+			</div>
+		</div>
+		<!-- /#sb-site -->
+
+		<?php include "/usr/local/apache2/htdocs/themes/tabi/common/navgation_common.html"; ?>
+
+		<?php include "/usr/local/apache2/htdocs/tabijs/include_footer_ad.js"; ?>
+		<?php include "/usr/local/apache2/htdocs/tabijs/include_footer_normal.js"; ?>
+		<?php include "/usr/local/apache2/htdocs/modules/affiliate/page/include_bcon.php"; ?>
+	
+		<!-- スクリプト -->
+		<script src="js/sp_greenliner.js"></script>
+	</body>
+</html>

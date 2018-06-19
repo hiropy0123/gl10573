@@ -1,0 +1,31 @@
+.sp-container {
+  padding: 0 2.3%;
+}
+
+#contents {
+  padding: 0;
+  max-width: 630px;
+  margin: auto;
+}
+
+.road_map-image {
+  img {
+    display: inline-block;
+    margin-bottom: 1.6rem;
+  }
+}
+
+#pagetop {
+  display: none;
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  width: 64px;
+  height: 64px;
+  background: url('../images/pagetop.png') center / contain no-repeat;
+  z-index: 20;
+  opacity: 0.9;
+  &:hover {
+    opacity: 1;
+  }
+}

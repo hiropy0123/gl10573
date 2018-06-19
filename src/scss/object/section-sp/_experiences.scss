@@ -1,0 +1,42 @@
+#experiences {
+  position: relative;
+    margin-bottom: 10vw;
+  .imageHeadline {
+    text-align: center;
+    margin-bottom: 3vw;
+  }
+  .swiper-wrapper {
+    width: 75%;
+    height: 125vw !important;
+  }
+  .viewarea-info {
+    h3 {
+      font-size: 5vw;
+      margin: .75em 0 .75em;
+      padding-bottom: .75em;
+      border-bottom: 1px solid;
+    }
+    p {
+      font-size: 3.8vw;
+    }
+  }
+  .view-detail-btn {
+    border: 2px solid #333;
+    font-size: 4.8vw;
+    padding: 3.5vw;
+    background: #c0dda3;
+    text-align: center;
+    margin: 1rem 1.5%;
+    a {
+      color: #333;
+      &:hover {
+        color: #333;
+      }
+    }
+  }
+
+}
+
+#experiencesSlider {
+  position: relative;
+}

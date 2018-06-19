@@ -1,0 +1,70 @@
+<?php
+if (!defined('XOOPS_ROOT_PATH')) {
+  $dir = dirname(__FILE__);
+  require_once $dir.'/../../mainfile.php';
+}
+require_once '/usr/local/apache2/htdocs/modules/tabilib/tabi_special_config.php';
+$option = new tabi_special_config();
+
+$page_title="緑の直行便グリーンライナーのご予約｜往復2000円で絶景の十日町・農業体験を楽しもう - 旅の発見";
+$page_description="里山暮らしや農業に興味のある方、東京－新潟県十日町間直行バス「グリーンライナー」で気軽に里山暮らし・農業体験はいかがですか？ネットでラクラク、グリーンライナーのご予約を受け付けています。";
+$page_keyword="グリーンライナー,十日町,直行バス,農業体験,予約,里山暮らし";
+
+//関連ID(無しの時はコメントアウト)
+//$GMURL = $_SERVER['SERVER_NAME'];
+//if($GMURL == "devtabihatsu.com"){$rel_id = 77060;}
+//if($GMURL == "tabihatsu.jp"){$rel_id = 95268;}
+
+//追加CSS(追加無しの時はコメントアウト)
+$add_css_array[] = "css/greenliner.css";
+
+//追加JS(追加無しの時はコメントアウト)
+// $add_js_array[] = "js/greenliner.js";
+
+//追加meta情報(追加無しの時はコメントアウト)
+$add_meta = <<<EOF
+<meta property="og:title" content="{$page_title}" />
+<meta property="og:description" content="{$page_description}" />
+<meta property="og:url" content="http://tabihatsu.jp/special/greenliner/" />
+<meta property="og:image" content="http://tabihatsu.jp/special/greenliner/images/top_sp.png" />
+EOF;
+
+$smart_flg = $option->getUserAgent();
+
+include "./_list_tokamachi.php";
+
+if ($smart_flg) {
+	include "./sp_index.html";
+} else {
+	include "../../themes/tabi/header_special.php";
+?>
+
+<!-- ここからコンテンツエリア -->
+
+<div class="tokamachi_breadcrumb">
+	<ul>
+		<li><a href="http://tabihatsu.jp">トップページ</a> &gt;</li>
+		<li>緑の直行便グリーンライナー</li>
+	</ul>
+</div>
+
+<div class="tokamachi_wrap">
+	<div id="tokamachi_sns" class="tokamachi_clearfix">
+		<ul class="tokamachi_sns_list tokamachi_clearfix">
+			<li>
+				<iframe src="https://www.facebook.com/plugins/like.php?href=http%3a%2f%2ftabihatsu%2ejp%2fspecial%2greenliner%2f&width=71&layout=button&action=like&show_faces=false&share=false&height=65&appId=145490145857491" width="75" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+			</li>
+			<li>
+				<a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja">ツイート</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+			</li>
+		</ul>
+	</div>
+</div>
+<!-- END tokamachi_wrp -->
+
+<!-- ここまでコンテンツエリア -->
+
+<?php include "../../themes/tabi/theme_list.php"; ?>
+<?php include "../../themes/tabi/footer.php"; ?>
+<?php $add_js_array[] = "js/greenliner.js"; ?>
+<?php } ?>

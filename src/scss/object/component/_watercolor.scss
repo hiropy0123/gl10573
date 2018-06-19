@@ -1,0 +1,59 @@
+.watercolor {
+  display: block;
+  position: absolute;
+  transition: 0.3s ease-in-out;
+}
+
+#bg01 {
+  width: 61px;
+  height: 62px;
+  background: url('../images/bg01.png') center / contain no-repeat;
+  top: 756px;
+  left: calc(50% - 454px);
+}
+
+#bg02 {
+  width: 84px;
+  height: 57px;
+  background: url('../images/bg02.png') center / contain no-repeat;
+  top: 730px;
+  right: calc(50% - 438px);
+}
+
+#bg03 {
+  width: 69px;
+  height: 69px;
+  background: url('../images/bg03.png') center / contain no-repeat;
+  top: 2208px;
+  left: calc(50% - 425px);
+}
+
+#bg04 {
+  width: 138px;
+  height: 151px;
+  background: url('../images/bg04.png') center / contain no-repeat;
+  top: 2102px;
+  right: calc(50% - 544px);
+}
+
+#bg05 {
+  width: 84px;
+  height: 57px;
+  background: url('../images/bg05.png') center / contain no-repeat;
+  left: calc(50% - 547px);
+}
+
+#bg06 {
+  width: 74px;
+  height: 75px;
+  background: url('../images/bg06.png') center / contain no-repeat;
+  right: calc(50% - 496px);
+}
+
+#bg07 {
+  width: 35px;
+  height: 36px;
+  background: url('../images/bg07.png') center / contain no-repeat;
+  left: calc(50% - 500px);
+  z-index: 1;
+}

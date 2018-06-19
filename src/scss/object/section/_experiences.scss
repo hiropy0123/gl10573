@@ -1,0 +1,86 @@
+#experiences {
+  position: relative;
+  .imageHeadline {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  margin-bottom: 80px;
+}
+
+#experiencesSlider {
+  position: relative;
+}
+.viewarea {
+  position: relative;
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: url('../images/experiences-slider-cover.png') center / contain no-repeat;
+    width: 407px;
+    height: 350px;
+    z-index: 15;
+  }
+  &-info {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 260px;
+    height: 350px;
+    z-index: 20;
+
+    h3 {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      padding-bottom: 14px;
+      margin: 14px 0;
+      border-bottom: 1px solid;
+    }
+    p {
+      line-height: 1.8;
+    }
+  }
+}
+
+.experiencesSlider-pager {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  .thumbnail-item {
+    img {
+      font-size: 0;
+    }
+    &.thumbnail-current {
+      img {
+        opacity: 0.2;
+      }
+    }
+    &-content {
+      position: relative;
+      .slide-title {
+        position: absolute;
+        bottom: 0;
+        display: inline-block;
+        padding: 3px 10px;
+        color: #fff;
+        height: 4rem;
+        font-size: 14px;
+      }
+      &:hover {
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: url('../images/magnify.png') center / 45px no-repeat, rgba(0,0,0,0.8);
+        }
+      }
+    }
+  }
+}

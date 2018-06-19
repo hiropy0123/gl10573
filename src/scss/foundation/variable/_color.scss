@@ -1,0 +1,39 @@
+//
+// #Colors
+//
+
+// @desc - プロジェクトを通して使用される色を管理するためのマップです。
+// @type {Map}
+// @prop {String} keys - keyは呼び出す時のキーワードになります。
+// @prop {String} values - 呼び出されるカラー（hexやRGBなど）です。
+// @see {Function} my-colors - マップに定義したvalueを返す関数です。
+$colors: (
+    theme: (
+        turquoise: #35bac0,
+        green: #afd8a8,
+        red: #f29c97,
+    ),
+    area: (
+        tokamachi: #f29c97,
+        kawanishi: #ffe893,
+        nakasato: #c0dda3,
+        matsudai: #91ccf0,
+        matsunoyama: #bbb3d8,
+    ),
+    text: (
+        base: #333,
+        light: #666,
+        dark: #000,
+    ),
+    link: (
+        base: #089900,
+        visited: null,
+        hover: lighten(#089900, 10%),
+    ),
+    bg: (
+        base: #fff,
+        light: lighten(#fff, 5%),
+        dark: darken(#fff, 10%),
+    ),
+
+) !default;
